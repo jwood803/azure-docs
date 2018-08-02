@@ -79,7 +79,7 @@ The following code snippets implement the primary functionality of this example:
     var iteration = trainingApi.TrainProject(project.Id);
 
     // The returned iteration will be in progress, and can be queried periodically to see when it has completed
-    while (iteration.Status == "Completed")
+    while (iteration.Status != "Completed")
     {
         Thread.Sleep(1000);
 
